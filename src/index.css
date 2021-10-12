@@ -1,13 +1,40 @@
+* {
+	font-family: monospace;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	padding: 4.5vw;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input {
+	font-size: 1.5rem;
+	width: 80vw;
+}
+h2,
+h3 {
+	font-size: 1.5rem;
+}
+.card-grid {
+	display: grid;
+	/* no se pueden usar valores vh o vw en el repeat*/
+	grid-template-columns: repeat(auto-fit, 25rem);
+	justify-content: center;
+}
+.card {
+	display: block;
+	align-items: center;
+	box-shadow: 0.1rem 0.2rem 0.2rem 0.1rem rgb(233, 233, 233);
+	border-radius: 10px;
+	margin-bottom: 2.5vh;
+	margin-right: 1vw;
+	overflow: hidden;
+}
+.card p {
+	font-size: 1.2rem;
+	text-align: center;
+	padding: 0.1rem;
+}
+
+.card img {
+	width: 25rem;
+	height: 25rem;
 }

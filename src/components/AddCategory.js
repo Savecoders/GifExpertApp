@@ -16,8 +16,14 @@ const AddCategory = ({ setCategories }) => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<input type='text' value={inputValue} onChange={handleInputChange} />
+		<form onSubmit={handleSubmit} className='mg-3vw'>
+			<input
+				type='text'
+				placeholder='Search...'
+				value={inputValue}
+				onChange={handleInputChange}
+				className='field'
+			/>
 		</form>
 	);
 };

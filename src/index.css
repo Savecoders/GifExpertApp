@@ -1,40 +1,131 @@
-* {
-	font-family: monospace;
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bgPage: #1f1d2b;
+		--bgWidget: rgb(128 129 145 / 24%);
+		--bgCard: #1f1d2b;
+		--colorFont: #c5c6dd;
+		--SecondColorFont: #252936;
+		--AncordFont: #d8d9ee;
+		--font: monospace;
+	}
 }
-body {
-	padding: 4.5vw;
+@media (prefers-color-scheme: light) {
+	:root {
+		--bgPage: #faf8f8;
+		--bgWidget: white;
+		--bgCard: #020a1d;
+		--colorFont: #11151c;
+		--SecondColorFont: #f1f1f1;
+		--AncordFont: white;
+		--font: monospace;
+	}
 }
 
-input {
-	font-size: 1.5rem;
-	width: 80vw;
+* {
+	font-family: var(--font);
+	margin: 0;
+	padding: 0;
 }
-h2,
-h3 {
+body {
+	background-color: var(--bgPage);
+}
+.mg-3vw {
+	margin: 3.2vw;
+}
+.navigation {
+	display: flex;
+	background: var(--bgPage);
+	box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem var(--SecondColorFont);
+	justify-content: space-between;
+	position: relative;
+	width: auto;
+	height: 5rem;
+	overflow: hidden;
+}
+.navigation h2 {
+	margin: 1.5rem 1rem 1rem 3rem;
+}
+.field {
+	border: 0.2rem solid var(--bgWidget);
+	border-radius: 4px;
+	background-color: var(--bgWidget);
+	color: var(--colorFont);
+	box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem var(--SecondColorFont);
+	height: 4rem;
 	font-size: 1.5rem;
+	min-width: 80vw;
+	outline: 0;
+	padding: 0 2rem 0 2rem;
+}
+
+.field::placeholder {
+	color: var(--colorFont);
+}
+
+h2 {
+	color: var(--colorFont);
+	font-size: 1.7rem;
+	margin: 0.5rem 0 1.5rem 0;
+}
+h3 {
+	color: var(--colorFont);
+	font-size: 1.3rem;
+	margin: 1.5rem 0 1rem 0;
 }
 .card-grid {
 	display: grid;
 	/* no se pueden usar valores vh o vw en el repeat*/
-	grid-template-columns: repeat(auto-fit, 25rem);
+	grid-template-columns: repeat(auto-fit, 26rem);
 	justify-content: center;
 }
 .card {
-	display: block;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	align-items: center;
-	box-shadow: 0.1rem 0.2rem 0.2rem 0.1rem rgb(233, 233, 233);
 	border-radius: 10px;
+	box-shadow: 0.06rem 0.06rem 0.07rem 0.08rem var(--SecondColorFont);
 	margin-bottom: 2.5vh;
-	margin-right: 1vw;
+	margin-right: 1.5vw;
+	max-height: 26rem;
 	overflow: hidden;
 }
+.card a {
+	text-decoration: none;
+	color: var(--AncordFont);
+	visibility: hidden;
+	position: absolute;
+	font-size: 3.5rem;
+}
+.card img {
+	position: relative;
+	height: 26rem;
+	width: 26rem;
+	transition: 0.5s;
+	transition-property: opacity;
+}
 .card p {
+	color: var(--AncordFont);
+	position: relative;
 	font-size: 1.2rem;
-	text-align: center;
-	padding: 0.1rem;
+	/*css metod in text-flow*/
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.card:hover {
+	background: var(--bgCard);
+}
+.card:hover img {
+	opacity: 0.6;
+	z-index: -1;
 }
 
-.card img {
-	width: 25rem;
-	height: 25rem;
+.card:hover a {
+	visibility: visible;
+	cursor: pointer;
+}
+.card:hover p {
+	margin: 0 1rem 0 1rem;
+	bottom: 3rem;
 }

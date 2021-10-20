@@ -14,17 +14,19 @@ const GitExpertApp = () => {
 	/* 	categories.filter((categorie) => categorie !== categories[categories.length - 1]) */
 	return (
 		<>
-			<h2>GitExpertApp</h2>
+			<nav className='navigation'>
+				<h2 className='animate__animated animate__fadeIn'>
+					<i class='bx bxs-gift' />
+					GifExpertApp
+				</h2>
+			</nav>
 			<AddCategory setCategories={setCategories} />
-			<hr />
-			<ol>
-				{/*The keys are an important part for reactj to take into account
+			{/*The keys are an important part for reactj to take into account
          the state of our application and thus have a specific order and
         if any change was made, react will take it into account */}
-				{categories.map((category) => (
-					<GifGrid key={category} category={category} />
-				))}
-			</ol>
+			{categories.map((category) => (
+				<GifGrid key={category} category={category} />
+			))}
 		</>
 	);
 };

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test in GifGridItem shallow GifGrid 1`] = `
+<div
+  className="card animate__animated animate__fadeIn animate__delay-1s\\""
+>
+  <a
+    href="https://localhost/algo.jpg"
+  >
+    <i
+      className="bx bx-link-alt bx-flip-horizontal bx-tada"
+    />
+  </a>
+  <img
+    alt="Save"
+    src="https://localhost/algo.jpg"
+  />
+  <p>
+    Save
+  </p>
+</div>
+`;

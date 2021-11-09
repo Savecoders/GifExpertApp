@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render <GifExpertApp/> shallow components 1`] = `
+<Fragment>
+  <NavBar
+    title="GifExpertApp"
+  />
+  <AddCategory
+    setCategories={[Function]}
+  />
+  <GifGrid
+    category="Full Metal Alchemists"
+    key="Full Metal Alchemists"
+  />
+</Fragment>
+`;

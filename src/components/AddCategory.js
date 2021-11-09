@@ -17,6 +17,7 @@ const AddCategory = ({ setCategories }) => {
 
 	return (
 		<form onSubmit={handleSubmit} className='mg-3vw'>
+			{/* <p>{inputValue}</p> */}
 			<input
 				type='text'
 				placeholder='Search...'

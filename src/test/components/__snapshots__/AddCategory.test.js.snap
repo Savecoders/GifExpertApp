@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test in <AddCategory/> show addCategory 1`] = `
+<form
+  className="mg-3vw"
+  onSubmit={[Function]}
+>
+  <input
+    className="field"
+    onChange={[Function]}
+    placeholder="Search..."
+    type="text"
+    value=""
+  />
+</form>
+`;

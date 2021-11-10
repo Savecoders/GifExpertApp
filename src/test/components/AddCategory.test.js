@@ -21,4 +21,11 @@ describe('test in <AddCategory/>', () => {
 		wrapper.find('form').simulate('submit', { preventDefault() {} });
 		expect(setCategories).not.toHaveBeenCalled();
 	});
+	test('call set categories and clear inputText', () => {
+		const input = wrapper.find('input');
+		input.simulate('change', { target: { value: 'hello words' } });
+		wrapper.find('form').simulate('submit', { preventDefault() {} });
+		expect(setCategories).toHaveBeenCalled();
+		expect(input.props().value).toBe('');
+	});
 });

@@ -1,4 +1,5 @@
 import { shallow } from 'enzyme';
+import '@testing-library/jest-dom';
 import GifGrid from '../../components/GifGrid';
 import { useFetchGifs } from '../../hooks/useFetchGifs';
 jest.mock('../../hooks/useFetchGifs');
@@ -18,12 +19,25 @@ describe('test in <GifGrid/>', () => {
 				url: 'https://localhost/xddddddd/cosa.jpg',
 				title: 'cosas de la vida',
 			},
+			{
+				id: 'asdasd',
+				url: 'https://localhost/xddddddd/cosa.jpg',
+				title: 'cosas de la vida',
+			},
+			{
+				id: 'aaaaaa',
+				url: 'https://localhost/xddddddd/cosa.jpg',
+				title: 'cosas de la vida',
+			},
 		];
 		useFetchGifs.mockReturnValue({
 			data: gifs,
-			loading: true,
+			loading: false,
 		});
 		const wrapper = shallow(<GifGrid category={'Hunter X Hunter'} />);
-		expect(wrapper).toMatchSnapshot();
+
+		/* expect(wrapper).toMatchSnapshot(); */
+		expect(wrapper.find('p').exists()).toBe(false);
+		expect(wrapper.find('GifGridItem').length).toBe(gifs.length);
 	});
 });

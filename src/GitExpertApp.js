@@ -2,14 +2,14 @@ import { useState } from 'react';
 import AddCategory from './components/AddCategory';
 import GifGrid from './components/GifGrid';
 import NavBar from './components/NavBar';
-const GitExpertApp = () => {
+const GitExpertApp = ({ defaultCategoies = [] }) => {
 	/* const categories = [
 		'One Piece',
 		'Hunter X Hunter',
 		'Full Metal Alchemist',
 		'One Punch',
 	]; */
-	const [categories, setCategories] = useState(['Full Metal Alchemists']);
+	const [categories, setCategories] = useState(defaultCategoies);
 	/* const handleAdd = () => setCategories((cats) => [...cats, 'Boku no hero']);
 	const handleDelete = () => setCategories((cats) => cats.splice(0, cats.length - 1)); */
 	/* 	categories.filter((categorie) => categorie !== categories[categories.length - 1]) */

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render <GifExpertApp/> have categories 1`] = `
+<Fragment>
+  <NavBar
+    title="GifExpertApp"
+  />
+  <AddCategory
+    setCategories={[Function]}
+  />
+  <GifGrid
+    category="One Puch"
+    key="One Puch"
+  />
+  <GifGrid
+    category="Hunter X Hunters"
+    key="Hunter X Hunters"
+  />
+</Fragment>
+`;
+
+exports[`render <GifExpertApp/> shallow components 1`] = `
+<Fragment>
+  <NavBar
+    title="GifExpertApp"
+  />
+  <AddCategory
+    setCategories={[Function]}
+  />
+</Fragment>
+`;

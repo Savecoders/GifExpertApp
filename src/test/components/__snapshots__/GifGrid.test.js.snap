@@ -23,34 +23,3 @@ exports[`test in <GifGrid/> shallow GifGrid 1`] = `
   />
 </Fragment>
 `;
-
-exports[`test in <GifGrid/> shallow items and render images 1`] = `
-<Fragment>
-  <h3
-    className="mg-3vw animate__animated animate__fadeIn"
-  >
-    <i
-      class="bx bxs-right-arrow bx-xs"
-    />
-     
-    Hunter X Hunter
-  </h3>
-  <p
-    className="animate__animated animate__flash"
-  >
-    <i
-      className="loading bx bx-loader-alt bx-spin"
-    />
-  </p>
-  <div
-    className="card-grid "
-  >
-    <GifGridItem
-      id="ABC"
-      key="ABC"
-      title="cosas de la vida"
-      url="https://localhost/xddddddd/cosa.jpg"
-    />
-  </div>
-</Fragment>
-`;

@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom';
 import GitExpertApp from './GitExpertApp';
 import './index.css';
 
-ReactDOM.render(<GitExpertApp />, document.getElementById('root'));
+ReactDOM.render(
+	<GitExpertApp defaultCategoies={['full metal alchemist']} />,
+	document.getElementById('root')
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
